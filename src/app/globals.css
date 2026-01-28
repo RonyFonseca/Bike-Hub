@@ -1,0 +1,26 @@
+* {
+  margin: 0px; 
+  padding: 0;
+  box-sizing: border-box;   
+  font-family: "Inter",sans-serif;
+}
+
+:root {
+  --color-blue-light: #3B82F6; 
+  --color-blue-medium: #1E293B;
+  --color-blue-medium-opacity: #1e293bc9;
+  --color-blue-dark: #0F172A;
+
+  --color-white: #F8FAFC; 
+  --color-light-gray: #CBD5E1; 
+  --color-dark-gray: #64748B;
+}
+
+.bolder {
+    font-weight: 600;
+}
+
+a {
+  color: var(--color-blue-light);
+}
+
