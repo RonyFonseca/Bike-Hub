@@ -8,13 +8,17 @@ export const inter = Inter({
   display: "swap",
 })
 
+export const metadata = {
+  title: "Bike Hub"
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className={inter.className}>
         {children}
       </body>

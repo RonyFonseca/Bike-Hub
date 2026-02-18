@@ -1,0 +1,9 @@
+.status_item {
+    margin-bottom: 12px;
+}
+
+.status_item > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}

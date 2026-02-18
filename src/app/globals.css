@@ -8,12 +8,16 @@
 :root {
   --color-blue-light: #3B82F6; 
   --color-blue-medium: #1E293B;
-  --color-blue-medium-opacity: #1e293bc9;
+  --color-blue-medium-opacity: #1e293bbe;
   --color-blue-dark: #0F172A;
 
   --color-white: #F8FAFC; 
   --color-light-gray: #CBD5E1; 
   --color-dark-gray: #64748B;
+
+  --color-green: #22C55E;
+  --color-yellow: #FACC15; 
+  --color-red: #EF4444;
 }
 
 .bolder {

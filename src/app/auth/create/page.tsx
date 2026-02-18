@@ -1,4 +1,5 @@
 'use client';
+
 import AuthLayout from "../../../Components/AuthLayout/AuthLayout";
 
 import style from "../auth.module.css";
@@ -24,13 +25,38 @@ export default function Create() {
         router.push(`/auth/login`);
     }
 
-    const createUser = () => {
-        if(!popupRef.current) return
-        popupRef.current.style.display = "block";
-        
-        if(!formRef.current) return
-        formRef.current.style.opacity = "50%";
-        formRef.current.style.filter = "blur(5px)";
+    const validateInformations = () => {
+        if(inputEmailRef.current == null || inputPasswordRef.current == null || inputNameRef.current == null) throw "Erro no client"
+
+        if(inputEmailRef.current.value == "" || inputPasswordRef.current.value == "" || inputNameRef.current.value == ""){
+            throw "Informações vazias não serão aceitas !";
+        }
+
+        if(inputEmailRef.current.value.toLowerCase() != inputEmailRef.current?.value){
+            throw "E-mail contém letras maiúsculas !";
+        }
+
+        if(inputPasswordRef.current.value.length < 8 ){
+            throw "A senha deve conter no mínimo 8 caracteres !";
+        }
+    }
+
+    const getInformations = () => {
+        try {
+            validateInformations(); 
+            if(!popupRef.current) return
+            popupRef.current.style.display = "block";
+            
+            if(!formRef.current) return
+            formRef.current.style.opacity = "50%";
+            formRef.current.style.filter = "blur(5px)";
+        }catch(e){
+            console.log(e);
+        }
+    }
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
     }
 
     const enterAs = (n:string) => {
@@ -43,9 +69,16 @@ export default function Create() {
         formRef.current.style.filter = "blur(0px)";
 
         if(!inputNameRef.current || !inputEmailRef.current || !inputPasswordRef.current) return 
-        console.log(inputNameRef.current.value);
-        console.log(inputEmailRef.current.value);
-        console.log(inputPasswordRef.current.value);
+
+        const user = {
+            name: inputNameRef.current.value,
+            email: inputEmailRef.current.value,
+            password: inputPasswordRef.current.value,
+            typeCount: typeCount, 
+        }
+        
+        document.cookie = `token=${JSON.stringify(user)}; path=/`;
+        router.push("/");
     }
 
     return (
@@ -59,7 +92,7 @@ export default function Create() {
                 </div>
             </div>
 
-            <form className={style.form} ref={formRef}>
+            <form className={style.form} ref={formRef} onSubmit={(e) => handleSubmit(e)}>
                 <div className={style.form_icon}>
                     <i className="bi bi-person-add"></i>
                 </div>
@@ -88,7 +121,7 @@ export default function Create() {
                         <p>Escolha bem suas credenciais para o cadastro, mas fique tranquilo caso você esqueça é só acessar o suporte.</p>
                     </div>
                     <div className={style.form_button}>
-                        <button className={style.form_button} onClick={createUser}>Criar</button>
+                        <button className={style.form_button} onClick={getInformations}>Criar</button>
                         <button onClick={handleNavigate}><i className="bi bi-person-add"></i></button>
                     </div>
                 </div>

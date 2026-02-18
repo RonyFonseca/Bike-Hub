@@ -1,0 +1,38 @@
+.status_item {
+    margin-bottom: 12px;
+}
+
+.status_item > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.status_item > input {
+    width: 100%;
+    border:none;
+}
+
+.status_item > input {
+  width: 100%;
+  appearance: none;
+  height: 8px;
+  background: #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+/* Barra preenchida (Chrome) */
+.status_item > input::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--color-blue-medium);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.status_item > input::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}

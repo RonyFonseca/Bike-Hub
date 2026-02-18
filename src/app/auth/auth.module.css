@@ -59,9 +59,13 @@
     border-radius: 10px;
     border: none; 
     background-color: var(--color-blue-dark);
-    color: var(--color-white);
     width: 100%;
     outline: none;
+    color: var(--color-white);
+}
+
+.form_input > input::placeholder {
+    color: var(--color-white);
 }
 
 .form_input > i {

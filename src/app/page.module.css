@@ -1,0 +1,122 @@
+.container_home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main_content {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.menu_aside {
+    margin-top: 40px;
+    padding-right: 50px;
+    margin-right: 50px;
+    height: 800px;
+}
+
+.information_security {
+    color: var(--color-white);
+    width: 330px;
+    background-color: var(--color-blue-medium-opacity);
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.information_security > i {
+    font-size: 45px;
+    margin-right: 10px;
+}
+
+.right_content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cards_container {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    max-height: 600px;
+    padding-right: 10px;
+    padding: 20px;
+}
+
+.cards_container::-webkit-scrollbar {
+    width: 10px;    
+}
+
+.cards_container::-webkit-scrollbar-track {
+    background: #bdbdbd;
+}
+
+/* parte que se move */
+.cards_container::-webkit-scrollbar-thumb {
+  background: var(--color-blue-medium);
+
+}
+
+/* hover */
+.cards_container::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.search_shortcuts {
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-blue-medium-opacity)
+}
+
+.search_container {
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.search_container > ul > li {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.search_input {
+    display: flex;
+    align-items: center;
+}
+
+.search_input > i {
+    position: absolute;
+    margin-left: 20px;
+    color: var(--color-white);
+    font-size: 25px;
+}
+
+.search_input > input {
+    width: 100%;
+    padding: 10px;
+    height: 60px;
+    font-size: 16px;
+    background-color: var(--color-blue-medium-opacity);
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    color: var(--color-white);
+    padding-left: 50px;
+}
+
+
+.search_input > input::placeholder {
+    color: var(--color-white);
+}
+
+.main_container {
+    margin-top: 20px;
+    width: 800px;
+}  

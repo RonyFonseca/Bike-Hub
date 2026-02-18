@@ -1,0 +1,28 @@
+.menu {
+    width: 750px;
+    margin-top: 20px;
+}
+
+.menu > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.menu > ul > li {
+    padding: 8px 30px;
+    background-color: var(--color-blue-medium);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu > ul > li > a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
