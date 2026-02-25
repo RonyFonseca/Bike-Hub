@@ -1,0 +1,218 @@
+.bikes_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.main {
+    margin-top: 50px;
+    width: 100%;
+    padding: 0px 400px;
+    flex: 1;
+}
+
+.content_container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.create_button {
+    background-color: var(--color-blue-medium);
+    color: var(--color-white); 
+    border: none; 
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 25px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.information {
+    font-size: 19px;
+    color: var(--color-blue-medium)
+}
+
+.information > h2 {
+    border-bottom: 2px solid var(--color-blue-medium);
+}
+
+.information > ul {
+    list-style-position: inside;
+    width: 300px;
+}
+
+.information > ul > li:nth-child(3) > .bom {
+    padding: 0px 15px;
+    border-radius: 10px;
+    background-color: var(--color-blue-light);
+}
+
+.information > ul > li:nth-child(3) > .meio_termo {
+    padding: 0px 15px;
+    border-radius: 10px;
+    background-color: var(--color-yellow);
+}
+
+.information > ul > li:nth-child(3) > .ruim {
+    padding: 0px 15px;
+    border-radius: 10px;
+    background-color: var(--color-red);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 150px;
+}
+
+.buttons > button {
+    background-color: var(--color-blue-medium);
+    color: var(--color-white); 
+    border: none; 
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 25px;
+    width: 60px;
+    height: 60px;;
+}
+
+
+.status_container {
+    width: 1000px;
+    margin-top: 50px;
+}
+
+
+.registered_bikes {
+    align-self: flex-start;
+}
+
+.registered_bikes > div {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.registered_bikes > div::-webkit-scrollbar {
+    width: 10px;
+    height: 10px; 
+}
+
+/* fundo da barra */
+.registered_bikes > div::-webkit-scrollbar-track {
+  background: #bdbdbd;
+}
+
+/* parte que se move */
+.registered_bikes > div::-webkit-scrollbar-thumb {
+  background: var(--color-blue-medium);
+
+}
+
+/* hover */
+.registered_bikes > div::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+@media (max-width: 900px) {
+
+    .bikes_container {
+        align-items: end;
+    }
+
+    .menu_container {
+        align-self: flex-start;
+        padding-left: 30px;
+    }
+
+    .content_container {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .create_button {
+        width: 100%;
+    }
+
+    .information {
+        padding-top: 20px;
+        font-size: 16px;
+        color: var(--color-blue-medium)
+    }
+
+    .information > h2 {
+        border-bottom: 2px solid var(--color-blue-medium);
+    }
+
+    .information > ul {
+        list-style-position: inside;
+        width: 300px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100px; 
+        position: absolute;
+        top: 200px;
+        left: 360px;
+    }
+
+    .buttons > button {
+        background-color: var(--color-blue-medium);
+        color: var(--color-white); 
+        border: none; 
+        border-radius: 10px;
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .imagem_bike {
+        width: 300px;
+        height: 300px;
+    }
+
+    .status_container {
+        width: 350px;
+        margin-top: 10px;
+    }
+
+    .registered_bikes {
+        align-self: auto;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .registered_bikes > h2 {
+        font-size: 25px;
+        width: 300px;
+        border-bottom: 2px solid var(--color-blue-medium);
+    }
+
+    .registered_bikes > div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        width: 350px;
+        padding-bottom: 10px;
+    }
+
+}

@@ -28,3 +28,12 @@ a {
   color: var(--color-blue-light);
 }
 
+.logo {
+  position: absolute;
+}
+
+@media (max-width:1500px) {
+    .logo {
+      display: none;
+    }
+}

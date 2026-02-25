@@ -1,0 +1,204 @@
+/*----Reparar Bike------*/ 
+.rapair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+
+.repair_center_content_2 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 1400px;
+}
+
+.content_container_2 {
+    display: flex;
+}
+
+.rapair_options_click {
+    margin-left: 20px;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-left: 2px solid var(--color-blue-medium);
+}
+
+.rapair_options_click > p {
+    margin: 10px 40px;
+}
+
+.rapair_options_click_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 40px;
+}
+
+.rapair_options_click_buttons > div {
+    background-color: var(--color-blue-medium);
+    color: var(--color-white); 
+    border-radius: 10px;
+    cursor: pointer;
+    height: 120px;  
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rapair_options_click_buttons > div > i {
+    font-size: 45px;
+}
+
+.rapair_build_section {
+    align-self: self-start;
+    margin-left: 20px;
+}
+
+.rapair_build_section > h3 {
+    font-size: 25px;
+    color: var(--color-blue-dark);
+    border-bottom: 2px solid var(--color-blue-dark);
+    padding-bottom: 5px;
+    margin-bottom: 14px;
+}
+
+.rapair_build_item {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--color-blue-dark);
+    gap: 20px;
+}
+
+.rapair_build_item > div {
+    background-color: var(--color-light-gray);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.rapair_build_item > div > i {
+    font-size: 25px;
+}
+
+.status_container_menu {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.status_container_menu > button {
+    width: 100px;
+    height: 50px;
+    border: none; 
+    border-radius: 10px;
+    color: var(--color-white);
+}
+
+.status_container_menu > button:nth-child(1) {
+    background-color: var(--color-green);
+}
+
+.status_container_menu > button:nth-child(2) {
+    background-color: var(--color-red);
+}
+
+.components_repair_options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--color-blue-medium)
+}
+
+.components_repair_options > h3 {
+    border-bottom: 2px solid var(--color-blue-medium);
+}
+
+.components_repair_options > div {
+    background-color: var(--color-yellow);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    color: var(--color-blue-dark); 
+    font-weight: bolder;
+}
+
+.rapair_build_item {
+    display: flex;
+    color: var(--color-blue-dark);
+    gap: 20px;
+}
+
+.rapair_build_item > div {
+    background-color: var(--color-light-gray);
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.rapair_build_item > .ativado  {
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+}
+
+
+@media (max-width: 900px) {
+
+    .repair {
+        width: 100%;
+    }
+    
+    .menu_2 {
+        align-self: self-start;
+        margin-left: 20px;
+    }
+
+    .repair_center_content_2 {
+        flex-direction: column;
+        width: 400px;
+    }
+
+    .menu {
+        width: 400px;
+    }
+
+    .content_container_2 {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .status_container_2 {
+        width: 350px;
+    }
+
+    .rapair_options_click {
+        width: 400px;
+        border: none;
+    }
+
+    .rapair_options_click_buttons {
+        margin-top: 50px;
+    }
+
+    .rapair_options_click_buttons > div{
+        width: 100px;
+        height: 100px;
+    }
+
+    .rapair_build_section {
+        width: 400px;
+    }
+
+    .imageBike_2 {
+        width: 350px;
+        height: 350px;
+    }
+}
